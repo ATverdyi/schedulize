@@ -34,9 +34,9 @@ Usage (quick):
 
     # Option 2: variable switching
     async def on_state_change(opened: bool):
-        global should_rec
-        should_rec = opened
-        print("should_execute ->", should_execute)
+        global is_open
+        is_open = opened
+        print("should_execute ->", is_open)
 
     watcher = WindowWatcher(ws, on_change=on_state_change)
     asyncio.create_task(watcher.run())
